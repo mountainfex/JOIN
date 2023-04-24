@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN | Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/board.css">
+    <link rel="stylesheet" href="./css/boardMobile.css">
+    <script src="./js/storage.js"></script>
+    <script src="script.js"></script>
+    <script src="./template/template.js"></script>
+    <script src="./js/board.js"></script>
+
+    <link rel="shortcut icon" href="img/logo-white.svg" type="image/x-icon">
+</head>
+
+
+<body onload="init(); initBoard()">
+    <nav id="navbar">
+
+    </nav>
+    <section class="board">
+        <div class="boardHead">
+            <span class="sectionHeadline">Board</span>
+            <div>
+                <form class="searchForm" onsubmit="return false">
+                    <input type="text" required class="input" placeholder="Find Task" id="searchTask" onkeyup="search()">
+                    <button class="searchIcon"><img src="./img/icon-search.svg" alt=""></button>
+                </form>
+                <div class="btn" onclick="showAddTaskOnBoard()">
+                    <span>Add task</span>
+                    <img src="./img/icon-add-plus-white.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <form class="searchFormMobile" onsubmit="return false">
+            <input type="text" required class="input" placeholder="Find Task" id="searchTask" onkeyup="search()">
+            <button class="searchIcon"><img src="./img/icon-search.svg" alt=""></button>
+        </form>
+        <div class="boardTask">
+            <div class="boardTaskStatus">
+                <div class="statusHeadline">
+                    <span>To do</span>
+                    <img src="./img/plus-button.svg" onclick="showAddTaskOnBoard()">
+                </div>
+                <div class="taskToDo" id="toDo" ondrop="moveTo('toDo')" ondragover="allowDrop(event); highlightDrop(0)" ondragleave="showDropCont()"></div>
+            </div>
+            <div class="boardTaskStatus">
+                <div class="statusHeadline">
+                    <span>In Progress</span>
+                    <img src="./img/plus-button.svg" onclick="showAddTaskOnBoard()">
+                </div>
+                <div class="taskInProgress" id="inProgress" ondrop="moveTo('inProgress')" ondragover="allowDrop(event); highlightDrop(1)" ondragleave="showDropCont()"></div>
+            </div>
+            <div class="boardTaskStatus">
+                <div class="statusHeadline">
+                    <span>Awaiting Feedback</span>
+                    <img src="./img/plus-button.svg" onclick="showAddTaskOnBoard()">
+                </div>
+                <div class="taskAwaitingFeedback" id="awaitingFeedback" ondrop="moveTo('awaitingFeedback')" ondragover="allowDrop(event); highlightDrop(2)" ondragleave="showDropCont()"></div>
+            </div>
+            <div class="boardTaskStatus">
+                <div class="statusHeadline">
+                    <span>Done</span>
+                    <img src="./img/plus-button.svg" onclick="showAddTaskOnBoard()">
+                </div>
+                <div class="taskDone" id="done" ondrop="moveTo('done')" ondragover="allowDrop(event); highlightDrop(3)" ondragleave="showDropCont()"></div>
+            </div>
+        </div>
+    </section>
+    <section class="bigTaskBg dNone" id="bigTaskBg" onclick="closeBigTask()">
+        <div class="bigTask" id="bigTask" onclick="doNotCloseBigTask(event)">
+
+        </div>
+    </section>
+    <section class="bigTaskBg dNone" id="addTaskBg" onclick="closeBigTask()">
+        <div class="addTaskOnBoard" id="addTask" onclick="doNotCloseBigTask(event)">
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

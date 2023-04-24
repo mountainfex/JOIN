@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- 
+Co-authored-by:
+Florian <https://github.com/FlorianIsenberg>
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="./font/font.css">
+    <script src="./js/storage.js"></script>
+    <script src="./js/signup.js"></script>
+    <title>JOIN | Sign up</title>
+    <link rel="shortcut icon" href="img/logo-white.svg" type="image/x-icon">
+</head>
+
+<body onload="init()">
+    <section>
+        <header>
+            <div class="headerLeft">
+                <img src="./img/Logo_dark.svg" alt="">
+            </div>
+        </header>
+        <div class="Background">
+            <div class="signUpFrame">
+                <a href="index.html"><img class="arrow" src="./img/arrow-left-line.svg" alt=""></a>
+                <div class="signUpContent">
+                    <p class="signUpHeader">Sign up</p>
+                    <img src="./img/login_underline.svg" alt="">
+                    <form class="login" onsubmit="addUser(); return false;">
+                        <div class="loginInput">
+                            <div class="input">
+                                <input required type="text" placeholder="Name" id="inputName">
+                                <img src="./img/icon-user-grey.svg" alt="">
+                            </div>
+                            <div class="input">
+                                <input required type="email" placeholder="Email" id="inputEmail">
+                                <img src="./img/email_input.svg" alt="">
+                            </div>
+                            <div class="input">
+                                <input required minlength="5" type="password" placeholder="Password" id="inputPassword">
+                                <img src="./img/password_input.svg" alt="">
+                            </div>
+                            <div class="btn">
+                                <button class="signUpBtn button">Sign Up</button>
+                            </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+            <p class="privacy">
+                <span>This site is an educational project and has NO SECURITY.</span>
+                <span>Do not enter any personal or confidential information!</span>
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>

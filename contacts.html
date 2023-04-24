@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JOIN-Contacts</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/logo-white.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/contacts_style.css" />
+    <script src="./js/storage.js"></script>
+    <script src="script.js"></script>
+    <script src="./template/template.js"></script>
+    <script src="./js/contacts.js"></script>
+</head>
+
+<body onload="init(); initContacts()">
+    <nav id="navbar"></nav>
+    <section class="cont_section">
+        <!--  LEFT  -->
+        <div id="contactsList" class="contMainContainerLeft custom-scrollbar"></div>
+        <button id="mobileBtn" onclick="open_popup()" class="cont_add_btn">
+        New contact&nbsp;<img src="img/contact_icon.svg" />
+      </button>
+        <!--  RIGHT  -->
+        <div id="cont_main_container_right" class="cont_main_container_right">
+            <div class="cont_main_container_right_titel">
+                <h1>Contacts</h1>
+                <div class="cont_separator"></div>
+                <h3>Better with a team</h3>
+                <img onclick="backTo()" class="helpBackBtn d-none" src="img/help_arrow.svg" />
+            </div>
+
+            <div class="contDisplay" id="contDisplay"></div>
+
+            <div class="cont_add">
+                <button onclick="open_popup()" class="cont_add_btn">
+            New contact&nbsp;<img src="img/contact_icon.svg" />
+          </button>
+            </div>
+        </div>
+        <div class="cont_infos_overlay d-none" id="cont_popup_id"></div>
+    </section>
+</body>
+
+</html>

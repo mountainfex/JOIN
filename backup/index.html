@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/mini_backend.js"></script>
+    <script src="js/login.js"></script>
+
+    <title>JOIN | Log in</title>
+  </head>
+  <body onload="init()">
+    <section>
+      <header>
+        <div class="headerLeft">
+          <img src="img/join-logo.svg" alt="logo" />
+
+        </div>
+        <div class="headerRight">
+          <p>Not a Join user?</p>
+          <a href="createaccount.html"><button class="signUpButton button">Sign up</button></a>
+        </div>
+      </header>
+      <div class="Background">
+        <div class="loginFrame">
+          <p class="loginHeader">Log in</p>
+          <img class="separator" src="img/seperate-vector.svg" alt="separator" />
+          <form class="login" onsubmit="logIn(); return false;">
+            <div class="loginInput">
+              <div class="input">
+                <input type="email" placeholder="enter Email" id="email" required />
+                <img src="img/email_input.svg" alt="" />
+              </div>
+              <div class="input">
+                <input type="password" placeholder="enter Password" id="password" required />
+                <img src="img/password_input.svg" alt="" />
+              </div>
+            </div>
+            <div class="rememberMe">
+              <div class="checkbox">
+                <input type="checkbox" />
+                <p>Remember me</p>
+              </div>
+              <a href="sendmail.html" class="forgot">Forgot my Password</a>
+            </div>
+            <div class="btn">
+              <button class="loginButton button">Log in</button>
+              <button class="guestLoginButton borderButton">Guest Log in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="msgBox" id="msgBox"></div>
+    </section>
+
+    
+  </body>
+</html>
+

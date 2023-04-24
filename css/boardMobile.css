@@ -1,0 +1,218 @@
+                /*  */
+                /* Media */
+                /*  */
+                /* Big Task */
+                
+                @media(max-width:650px) {
+                    .bigTaskBg {
+                        margin-top: 79px;
+                        height: calc(100vh - 79px - 80px);
+                        z-index: unset;
+                    }
+                    .bigTask {
+                        width: 100%;
+                        height: calc(100vh - 79px - 80px);
+                        border-radius: unset;
+                    }
+                    .bigTaskScroll {
+                        height: calc(100vh - 79px - 80px);
+                        padding: 20px 20px;
+                    }
+                    .cancelDesktop {
+                        display: none;
+                    }
+                    .cancelMobile {
+                        display: block;
+                    }
+                    .bigTaskCancel:hover {
+                        transform: rotate(0deg);
+                    }
+                }
+                /* Board */
+                
+                @media (max-width:980px) {
+                    .boardHead {
+                        padding: 20px 0px;
+                    }
+                    .searchForm {
+                        display: none;
+                    }
+                    .searchFormMobile {
+                        display: flex;
+                    }
+                }
+                
+                @media(max-width:890px) {
+                    .board {
+                        padding: 89px 30px 0px 262px;
+                    }
+                }
+                
+                @media (max-width:850px) {
+                    .board {
+                        padding: 79px 20px 0px 20px;
+                    }
+                    .boardTask {
+                        padding: 0px;
+                    }
+                    .boardTaskStatus {
+                        width: 280px;
+                    }
+                }
+                
+                @media(max-width:634px) {
+                    .boardTask {
+                        justify-content: center;
+                        height: calc(100vh - 325px);
+                    }
+                    .btn {
+                        height: 40px;
+                        width: 40px;
+                        padding: 0px;
+                    }
+                    .btn span {
+                        display: none;
+                    }
+                    .taskToDo,
+                    .taskInProgress,
+                    .taskAwaitingFeedback,
+                    .taskDone {
+                        height: unset;
+                        overflow-y: unset;
+                        padding: 10px 0px;
+                    }
+                }
+                /* Task Editor */
+                
+                @media(max-width:650px) {
+                    .bigTask form {
+                        margin: 0px 20px;
+                        height: calc(100vh - 79px - 80px);
+                    }
+                    .taskEditScroll {
+                        padding: 30px 0px 90px;
+                        height: calc(100vh - 79px - 80px);
+                        max-height: unset;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 23px;
+                    }
+                    .taskEditScroll label input,
+                    .taskEditScroll label textarea {
+                        width: 256px !important;
+                    }
+                    .taskEditPriority {
+                        width: 300px;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+                    .editPrio {
+                        width: 124px;
+                    }
+                    .taskEditContacts {
+                        width: 256px;
+                    }
+                    .taskContactsDropdown {
+                        width: 298px;
+                    }
+                    .taskContactsDropdown label input {
+                        width: unset !important;
+                    }
+                    .bigTaskEditSubmit {
+                        z-index: 1;
+                        height: 51px;
+                        width: 51px;
+                        padding: 0px;
+                    }
+                    .bigTaskEditSubmit span {
+                        display: none;
+                    }
+                }
+                /* Add Task */
+                
+                @media (max-width: 1330px) {
+                    .addTaskBody {
+                        flex-direction: column;
+                    }
+                    .addTaskBodyLeft,
+                    .addTaskBodyRight {
+                        padding: 0px 0px 34px 0px;
+                        border: 0px solid #D1D1D1;
+                    }
+                    .addTaskSubtask {
+                        width: 422px;
+                    }
+                }
+                
+                @media (max-width:1150px) {
+                    .addTaskSubmitButtons {
+                        flex-direction: column;
+                        align-items: flex-end;
+                    }
+                }
+                
+                @media (max-width: 700px) {
+                    .addTaskClear {
+                        display: none;
+                    }
+                    .addTaskSubmit {
+                        position: fixed;
+                        top: 111px;
+                        right: 40px;
+                        z-index: 15;
+                    }
+                }
+                
+                @media (max-width: 650px) {
+                    .addTaskOnBoard {
+                        border-radius: unset;
+                        align-items: center;
+                    }
+                    .addTaskScroll {
+                        height: calc(100vh - 160px);
+                        padding: 0;
+                    }
+                    .addTask {
+                        height: calc(100vh - 160px);
+                        padding: 80px 0px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .addTaskHead {
+                        width: 300px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    .addTaskSubmit {
+                        position: fixed;
+                        height: 51px;
+                        top: 14px;
+                        right: 20px;
+                        z-index: 15;
+                    }
+                    .addTaskBody label input,
+                    .addTaskBody label textarea {
+                        width: 256px;
+                    }
+                    .addTaskDropdown {
+                        width: 256px;
+                    }
+                    .addTaskDropdownMenu {
+                        width: 298px;
+                    }
+                    .addTaskPrioSec {
+                        width: 300px;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+                    .addTaskPrio {
+                        width: 124px;
+                    }
+                    .addTaskSubtask {
+                        width: 300px;
+                    }
+                }

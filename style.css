@@ -1,0 +1,450 @@
+@font-face {
+    font-family: Inter;
+    src: url('./font/Inter-Regular.ttf');
+    font-family: Inter-Bold;
+    src: url('./font/Inter-Bold.ttf');
+}
+
+:root {
+    --bg-main: #F6F7F8;
+    --bg-white: #ffffff;
+    --bg-blue: #2a3647;
+    --bg-highlight: #091931;
+    --bg-highlight-light-blue: #29ABE2;
+    --btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    --font-nav: 18px;
+    --font-nav-color: #ffffff;
+    --font-subheadline: 21px;
+    --font-subheadline-color: #000000;
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    --font-sectionHeadline: 61px;
+    --text-white: #ffffff;
+    --text-blue: #2A3647;
+    --text-light-blue: #29ABE2;
+}
+
+
+/* Mobile ab max-width 850px */
+
+body {
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.dNone {
+    display: none !important;
+}
+
+.dOn {
+    display: flex;
+}
+
+
+/* Navbar & Header */
+
+.sideMenu {
+    width: 232px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--font-nav-color);
+    font-size: var(--font-nav);
+    justify-content: space-evenly;
+    z-index: 10;
+}
+
+.logo img {
+    height: 122px;
+    width: 100px;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 53px;
+    text-decoration: none;
+    color: var(--font-nav-color);
+}
+
+.menu a:hover {
+    background-color: var(--bg-highlight);
+    cursor: pointer;
+}
+
+.menu img {
+    height: 22px;
+}
+
+.legal {
+    height: 289px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.legal a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 40px 8px 53px;
+    text-decoration: none;
+    color: var(--font-nav-color);
+}
+
+.legal a:hover {
+    background-color: var(--bg-highlight);
+    cursor: pointer;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 49px;
+    padding: 20px 36px 20px 348px;
+    background-color: var(--bg-white);
+    color: var(--font-subheadline-color);
+    font-size: var(--font-subheadline);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+}
+
+.mobileLogo {
+    display: none;
+}
+
+.headerProfile {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.headerProfile img:hover {
+    cursor: pointer;
+}
+
+.headerProfile div {
+    background: var(--bg-highlight);
+    border-radius: 559px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 49px;
+    width: 49px;
+}
+
+.headerProfile div img {
+    border: 2px solid var(--bg-white);
+    border-radius: 559px;
+    height: 41px;
+    width: 41px;
+}
+
+.headerProfile div img:hover {
+    border: 3px solid darkviolet;
+    cursor: pointer;
+}
+
+.profileMenu {
+    background-color: var(--bg-blue);
+    color: var(--font-nav-color);
+    position: absolute;
+    top: 89px;
+    right: 36px;
+    border-radius: 10px 0px 10px 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profileMenu div {
+    padding: 18px;
+    cursor: pointer;
+}
+
+.mobileProfileMenu {
+    display: none;
+}
+
+.sectionHeadline {
+    font-size: var(--font-sectionHeadline);
+    font-weight: 700;
+    line-height: 120%;
+}
+
+
+/* Departments */
+
+.sales {
+    background-color: #FC71FF;
+}
+
+.design {
+    background-color: #FF7A00;
+}
+
+.backoffice {
+    background-color: #1FD7C1;
+}
+
+.media {
+    background-color: #FFC701;
+}
+
+.marketing {
+    background-color: #0038FF;
+}
+
+
+/* Prio */
+
+.urgent {
+    background-color: #FF3D00 !important;
+}
+
+.medium {
+    background-color: #FFA800 !important;
+}
+
+.low {
+    background-color: #7AE229 !important;
+}
+
+
+/* Navbar & Header Responsive */
+
+@media(max-width:880px) {
+    .subheadline {
+        display: none;
+    }
+    .mobileLogo {
+        display: block;
+        height: 39px;
+    }
+    .mobileLogo img {
+        height: 39px;
+        object-fit: contain;
+    }
+    .header {
+        height: 49px;
+        padding: 20px 36px;
+    }
+}
+
+@media(max-width:850px) {
+    .sideMenu {
+        position: fixed;
+        bottom: 0px;
+        top: unset;
+        width: 100%;
+        height: 80px;
+        justify-content: space-evenly;
+    }
+    .logo {
+        display: none;
+    }
+    .legal {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+    }
+    .menu a {
+        display: flex;
+        flex-direction: column;
+        min-width: 70px;
+        width: 20%;
+        height: 80px;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .header {
+        height: 39px;
+        padding: 20px 25px;
+    }
+    .headerProfile a {
+        display: none;
+    }
+    .headerProfile div {
+        height: 39px;
+        width: 39px;
+    }
+    .headerProfile div img {
+        height: 31px;
+        width: 31px;
+    }
+    .profileMenu {
+        top: 79px;
+        right: 20px;
+    }
+    .mobileProfileMenu {
+        display: block;
+    }
+}
+
+
+/* Contact CSS Start*/
+
+.cont_section {
+    display: flex;
+}
+
+.cont_main_container_left {
+    width: 453px;
+    height: 935px;
+    left: 232px;
+    top: 89px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 0.25);
+}
+
+.cont_main_container_left_child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 357px;
+    height: 1072px;
+    left: 48px;
+    top: 2px;
+    background: (#FFFFFF);
+    height: calc(100% - 80px)
+}
+
+.cont_main_container_right {
+    background-color: rgb(246, 247, 248);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-between;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 50%;
+}
+
+.cont_main_container_right_titel {
+    display: flex;
+    margin-top: 130px;
+}
+
+.cont_main_container_right_titel h1 {
+    font-family: 'inter';
+    font-size: normal;
+    font-weight: 700;
+    font-size: 61px;
+    margin-right: 20px;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.cont_main_container_right_titel h3 {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 27px;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-family: 'inter';
+    line-height: 1.2;
+}
+
+.cont_separator {
+    border-left: 3px solid #29abe2;
+    margin-top: 7px;
+    margin-bottom: 10px
+}
+
+.cont_add_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 10px;
+    gap: 10px;
+    width: 193px;
+    height: 53px;
+    background: #2a3647;
+    border: 1px solid #2a3647;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 400px;
+    margin-bottom: 40px;
+}
+
+
+/* Profile Colors */
+
+.profileColor-0 {
+    background-color: #9327FF!important;
+}
+
+.profileColor-1 {
+    background-color: #FFA800!important;
+}
+
+.profileColor-2 {
+    background-color: #0223CF!important;
+}
+
+.profileColor-3 {
+    background-color: #CB02CF!important;
+}
+
+.profileColor-4 {
+    background-color: #AF1616!important;
+}
+
+.profileColor-5 {
+    background-color: #159030!important;
+}
+
+.profileColor-6 {
+    background-color: #0190E0!important;
+}
+
+.profileColor-7 {
+    background-color: #FF5C00!important;
+}
+
+.profileColor-8 {
+    background-color: #54b53e!important;
+}
+
+.profileColor-9 {
+    background-color: #32DAFF!important;
+}
+
+.profileColorMoreUsers {
+    background-color: var(--bg-blue)!important;
+}

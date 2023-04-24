@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/createaccount.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/storage.js"></script>
+    <script src="./js/createaccount.js"></script>
+    <title>JOIN | Sign up</title>
+    <link rel="shortcut icon" href="img/logo-white.svg" type="image/x-icon">
+</head>
+
+<body onload="init()">
+    <section>
+        <header>
+            <div class="headerLeft">
+                <img src="img/join-logo.svg" alt="logo">
+            </div>
+        </header>
+        <div class="Background">
+            <div class="signUpFrame">
+                <a href="index.html" rel="noopener"><img class="arrow" src="img/arrow-left-line.svg" alt="back arrow "></a>
+                <div class="signUpContent">
+                    <p class="signUpHeader">Sign up</p>
+                    <img class="separator" src="img/seperate-vector.svg" alt="separator">
+                    <form class="login" onsubmit="addUser(); return false;">
+                        <div class="loginInput">
+                            <div class="input">
+                                <label for="inputName">Name</label>
+                                <input type="text" id="inputName" required>
+                                <img src="img/icon-user.svg" alt="username">
+                            </div>
+                            <div class="input">
+                                <label for="inputEmail">Email</label>
+                                <input type="email" id="inputEmail" required>
+                                <img src="img/email_input.svg" alt="email adress">
+                            </div>
+                            <div class="input">
+                                <label for="inputPassword">Password</label>
+                                <input type="password" minlength="5" id="inputPassword" required>
+                                <img src="img/password_input.svg" alt="password">
+                            </div>
+                            <div class="btn">
+                                <button class="signUpBtn button" type="submit">Sign Up</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <p class="privacy">
+                <span>This site is an educational project and has NO SECURITY.</span>
+                <span>Do not enter any personal or confidential information!</span>
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>

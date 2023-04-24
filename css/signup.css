@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+
+.headerLeft {
+    position: absolute;
+    left: 5.35%;
+    right: 87.71%;
+    top: 7.81%;
+    bottom: 80.28%;
+}
+
+.Background {
+    background-color: #F5F5F5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signUpFrame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 0px;
+    position: absolute;
+    width: 90%;
+    max-width: 652px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    border-radius: 30px;
+}
+
+.arrow {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+
+.signUpContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.signUpHeader {
+    width: 315px;
+    height: 73px;
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 120%;
+    text-align: center;
+    color: #000000;
+}
+
+.loginInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    width: 422px;
+}
+
+.input {
+    box-sizing: border-box;
+    padding: 13px 21px;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+}
+
+.input input {
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+.input input::placeholder {
+    color: #D1D1D1;
+}
+
+.signUpBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0px;
+    gap: 10px;
+    width: 145px;
+    height: 51px;
+    background: #2A3647;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    color: #FFFFFF;
+    transition: 200ms;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #29ABE2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button:active {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: black;
+}
+
+.privacy {
+    align-self: flex-end;
+    color: red;
+}
+
+@media(max-width:400px) {
+    .headerLeft {
+        top: 20px;
+    }
+    .input input {
+        width: 220px;
+    }
+    .arrow {
+        top: 10px;
+        left: 10px;
+    }
+    .btn {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}

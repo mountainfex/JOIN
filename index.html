@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- 
+Co-authored-by: 
+Florian <https://github.com/FlorianIsenberg>
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./font/font.css">
+    <script src="./js/storage.js"></script>
+    <!-- <script src="./js/mini_backend.js"></script> -->
+    <script src="./js/login.js"></script>
+
+    <title>JOIN | Log in</title>
+
+    <link rel="shortcut icon" href="img/logo-white.svg" type="image/x-icon">
+</head>
+
+<body onload="init()">
+    <section>
+        <header>
+            <div class="headerLeft">
+                <img src="./img/Logo_dark.svg" alt="">
+            </div>
+            <div class="headerRight">
+                <p>Not a Join user?</p>
+                <a href="signup.html"><button class="signUpButton button">Sign up</button></a>
+            </div>
+        </header>
+        <div class="Background">
+            <div class="loginFrame">
+                <p class="loginHeader">Log in</p>
+                <img src="./img/login_underline.svg" alt="">
+                <form class="login" onsubmit="login(); return false;">
+                    <div class="loginInput">
+                        <div class="input" id="emailShake">
+                            <input required type="email" placeholder="Email" id="email">
+                            <img src="./img/email_input.svg" alt="">
+                        </div>
+                        <div class="input" id="passwordShake">
+                            <input required type="password" placeholder="Password" id="password" onkeyup="showPasswordIcon()">
+                            <span onclick="showPassword()">
+                                <img id="lockIMG" class="lock" src="./img/password_input.svg" alt="">
+                                <img id="eyeIMG" class="dnone" src="./img/closedeye.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="rememberMe">
+                        <div class="checkbox">
+                            <input type="checkbox" id="rememberMe">
+                            <p>Remember Me</p>
+                        </div>
+                        <a href="forgotpassword.html" class="forgot">Forgot my password</a>
+                    </div>
+                    <div class="btn">
+                        <button class="loginButton button">Log in</button>
+                        <button class="guestLoginButton borderButton " onclick="guestLogin()">Guest Log in</button>
+                    </div>
+                </form>
+            </div>
+            <div class="msgBox" id="msgBox"></div>
+            <p class="privacy">
+                <span>This site is an educational project and has NO SECURITY.</span>
+                <span>Do not enter any personal or confidential information!</span>
+            </p>
+        </div>
+    </section>
+
+    <script src="./js/signupmsg.js "></script>
+</body>
+
+</html>
