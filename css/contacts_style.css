@@ -10,8 +10,8 @@
     --bg-white: #ffffff;
     --bg-blue: #2a3647;
     --bg-highlight: #091931;
-    --font-nav: 16px;
-    --font-nav-color: #cdcdcd;
+    --font-nav: 18px;
+    --font-nav-color: #ffffff;
     --font-subheadline: 21px;
     --font-subheadline-color: #000000;
     --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -56,7 +56,7 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 8px 53px 8px 53px;
+    padding: 20px 53px;
     text-decoration: none;
     color: var(--font-nav-color);
 }
